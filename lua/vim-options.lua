@@ -10,6 +10,7 @@ vim.cmd("nnoremap <C-u> <C-u>zz")
 -- Moves to first non whitespace instead of beggining of line
 vim.cmd("map 0 ^")
 vim.cmd("set nu!")
+vim.cmd("set relativenumber")
 vim.g.mapleader = " "
 --vim.cmd("set cmdheight=0")
 
@@ -24,3 +25,5 @@ vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+
+

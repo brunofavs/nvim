@@ -54,14 +54,19 @@ return{
       lspconfig.jsonls.setup({
         capabilities = capabilities
       })
-      --lspconfig.ltex.setup({})
+      --lspconfig.ltex.setup({
+      lspconfig.texlab.setup({
+         capabilities = capabilities
+      })
       --lspconfig.autotools_ls.setup({})
       --lspconfig.markdown_oxide.setup({})
       --lspconfig.ruff_lsp.setup({
       --capabilities = capabilities
       --})
       --lspconfig.lemminx.setup({})
-      --lspconfig.yamlls.setup({})
+      lspconfig.yamlls.setup({
+        capabilities = capabilities
+      })
       lspconfig.pyright.setup({
         capabilities = capabilities
       })

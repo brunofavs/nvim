@@ -26,4 +26,15 @@ vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
+local autocmd = vim.api.nvim_create_autocmd
+
+-- autocmd("VimEnter", {
+--   command = ":silent !kitty @ set-spacing padding=0 margin=0",
+-- })
+
+autocmd("VimLeavePre", {
+  command = ":Neotree close",
+})
+
+
 

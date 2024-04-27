@@ -71,10 +71,14 @@ return{
         capabilities = capabilities
       })
 
+      --Not supported in Pyright
+      --vim.keymap.set('n','<leader>gi',vim.lsp.buf.implementation,{})
+      vim.keymap.set('n','<leader>rn',vim.lsp.buf.rename,{noremap = true})
       vim.keymap.set('n','<S-h>',vim.lsp.buf.hover,{})
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
       vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
+
     end
   }
 }

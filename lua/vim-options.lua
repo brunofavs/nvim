@@ -1,9 +1,8 @@
 -- ººººººººººººººººººººººººººººººººººººººº
 -- 		Vim Commands
 -- ººººººººººººººººººººººººººººººººººººººº
-
 -- Deleting goes into a trash registry, to not interfere with yanking registry
-vim.cmd('nnoremap d "_d')
+-- vim.cmd('nnoremap d "_d')
 -- Moving half page down/up also centers cursor, to prevent having to search for the cursor
 vim.cmd("noremap <C-d> <C-d>zz ")
 vim.cmd("nnoremap <C-u> <C-u>zz")
@@ -35,6 +34,7 @@ local autocmd = vim.api.nvim_create_autocmd
 autocmd("VimLeavePre", {
   command = ":Neotree close",
 })
+
 
 
 

@@ -10,4 +10,19 @@ return {
   {
     "tpope/vim-fugitive"
   },
+  {
+    "9seconds/repolink.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim"
+    },
+    cmd = {
+      "Repolink"
+    },
+    config = function ()
+      require("repolink").setup({
+        -- Without this one the issues the markdown doesn't render the graphic box
+        use_full_commit_hash = true
+      })
+    end
+  }
 }

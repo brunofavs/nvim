@@ -1,6 +1,8 @@
 return {
 	"rmagatti/auto-session",
 
+  -- vim.cmd("let g:auto_session_root_dir = '/home/bruno/.config/nvim/sessions'"),
+
 	config = function()
 		require("auto-session").setup({
 			log_level = "error",

@@ -35,6 +35,13 @@ autocmd("VimLeavePre", {
   command = ":Neotree close",
 })
 
-
+autocmd("FileType", {
+    pattern = "tex",
+    callback = function()
+        vim.opt_local.textwidth = 125
+        vim.opt_local.wrap = true
+        vim.opt_local.linebreak = true
+    end,
+})
 
 

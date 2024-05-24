@@ -46,6 +46,7 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
@@ -55,9 +56,12 @@ return {
 			lspconfig.jsonls.setup({
 				capabilities = capabilities,
 			})
+
 			lspconfig.ltex.setup({
 				capabilities = capabilities,
 			})
+
+
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
         on_attach = function(_, bufnr)

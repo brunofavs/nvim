@@ -7,15 +7,15 @@ return {
 			sources = {
 				null_ls.builtins.formatting.stylua,
 
+        -- English writting
+        -- null_ls.builtins.diagnostics.proselint,
+        -- null_ls.builtins.code_actions.proselint,
+        null_ls.builtins.diagnostics.write_good,
+
 				-- Python
 				null_ls.builtins.formatting.black,
 				-- Imports
 				null_ls.builtins.formatting.isort,
- --       null_ls.builtins.diagnostics.pylint.with({
- --         diagnostics_postprocess = function(diagnostic)
-   --         diagnostic.code = diagnostic.message_id
-     --     end,
-   --     }),
 			},
 		})
 

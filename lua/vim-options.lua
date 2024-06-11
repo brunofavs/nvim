@@ -1,6 +1,12 @@
 -- ººººººººººººººººººººººººººººººººººººººº
 -- 		Vim Commands
 -- ººººººººººººººººººººººººººººººººººººººº
+
+
+-- Background same as terminal
+-- vim.cmd("hi Normal ctermbg=none guibg=none")
+
+
 -- Deleting goes into a trash registry, to not interfere with yanking registry
 -- vim.cmd('nnoremap d "_d')
 -- Moving half page down/up also centers cursor, to prevent having to search for the cursor
@@ -45,12 +51,13 @@ local autocmd = vim.api.nvim_create_autocmd
 
 autocmd("VimLeavePre", {
   command = ":Neotree close",
+  -- command = ":Neotree close | :Undotree hide",
 })
 
 autocmd("FileType", {
-    pattern = "tex",
+    pattern = {"tex","txt"},
     callback = function()
-        vim.opt_local.textwidth = 125
+        vim.opt_local.textwidth = 110
         vim.opt_local.wrap = true
         vim.opt_local.linebreak = true
     end,

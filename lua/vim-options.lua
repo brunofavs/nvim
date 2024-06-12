@@ -2,10 +2,7 @@
 -- 		Vim Commands
 -- ººººººººººººººººººººººººººººººººººººººº
 
-
--- Background same as terminal
--- vim.cmd("hi Normal ctermbg=none guibg=none")
-
+vim.cmd("set cmdheight=0")
 
 -- Deleting goes into a trash registry, to not interfere with yanking registry
 -- vim.cmd('nnoremap d "_d')
